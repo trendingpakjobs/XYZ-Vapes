@@ -23,6 +23,14 @@ body, html {
   z-index: -1;
 }
 
+header .logo {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
 /* Header */
 header {
   position: fixed;

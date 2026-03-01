@@ -290,3 +290,74 @@ footer .socials a i:hover {
     text-align: center;
   }
 }
+
+
+
+/* Pro Card */
+.featured-products {
+  padding: 100px 5%;
+  color: #fff;
+  text-align: center;
+}
+
+.featured-products h2 {
+  font-size: 42px;
+  margin-bottom: 50px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.product-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.product-card {
+  min-width: 300px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  flex-shrink: 0;
+  transition: 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.order-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.order-btn:hover {
+  background: #ff4d4d;
+  color: #fff;
+}

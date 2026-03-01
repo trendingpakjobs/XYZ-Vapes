@@ -191,3 +191,31 @@ footer .socials a:hover {
   font-size: 28px;
   text-align: center;
 }
+
+
+/* Smoke */
+header .logo {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
+
+/* Black Icon theme*/
+
+footer .socials a i {
+  color: #111; /* black icon fill */
+  background: #fff; /* white circle background */
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 22px;
+  margin: 0 8px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+footer .socials a i:hover {
+  color: #0ff; /* neon accent on hover */
+  transform: scale(1.2);
+}

@@ -28,7 +28,13 @@ body, html {
   pointer-events: none;
 }
 
-
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
 
 /* Header */
 header {
@@ -192,13 +198,7 @@ footer .socials a:hover {
 }
 
 
-/* Smoke */
-header .logo {
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255,255,255,0.7);
-  font-size: 26px;
-  font-weight: bold;
-}
+
 
 
 

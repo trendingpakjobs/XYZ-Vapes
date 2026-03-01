@@ -20,20 +20,14 @@ if(exploreBtn){
 
 
 // Products Animation
-const slider = document.querySelector('.product-slider');
-
+const slider = document.querySelector('.product-grid');
 let scrollAmount = 0;
-let slideStep = 320; // roughly card width + gap
-let slideInterval = 2000; // 2 seconds for smooth slide
-
+const slideStep = 320; // approx card width + gap
 setInterval(() => {
   if(scrollAmount >= slider.scrollWidth - slider.clientWidth){
     scrollAmount = 0;
   } else {
     scrollAmount += slideStep;
   }
-  slider.scrollTo({
-    left: scrollAmount,
-    behavior: 'smooth'
-  });
-}, slideInterval);
+  slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+}, 2500); // 2.5 sec per slide

@@ -18,3 +18,22 @@ if(exploreBtn){
   });
 }
 
+
+// Products Animation
+const slider = document.querySelector('.product-slider');
+
+let scrollAmount = 0;
+let slideStep = 320; // roughly card width + gap
+let slideInterval = 2000; // 2 seconds for smooth slide
+
+setInterval(() => {
+  if(scrollAmount >= slider.scrollWidth - slider.clientWidth){
+    scrollAmount = 0;
+  } else {
+    scrollAmount += slideStep;
+  }
+  slider.scrollTo({
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+}, slideInterval);

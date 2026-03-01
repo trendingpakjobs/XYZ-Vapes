@@ -16,19 +16,18 @@ body, html {
 }
 
 /* Smoke canvas overlay */
-#smokeCanvas {
+#smokeVideo {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.35;
+  pointer-events: none;
 }
 
-header .logo {
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255,255,255,0.7);
-  font-size: 26px;
-  font-weight: bold;
-}
 
 
 /* Header */

@@ -15,7 +15,7 @@ body, html {
   position: relative;
 }
 
-/* Smoke canvas overlay */
+/* Smoke  overlay */
 #smokeVideo {
   position: fixed;
   top: 0;
@@ -23,10 +23,11 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2;
-  opacity: 0.35;
+  z-index: -1; /* video under all content */
+  opacity: 0.4; 
   pointer-events: none;
 }
+
 
 body::after {
   content: "";

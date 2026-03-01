@@ -294,6 +294,7 @@ footer .socials a i:hover {
 
 
 /* Pro Card */
+/* Section */
 .featured-products {
   padding: 100px 5%;
   color: #fff;
@@ -302,24 +303,26 @@ footer .socials a i:hover {
 
 .featured-products h2 {
   font-size: 42px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
-.product-slider {
+/* Grid */
+.product-grid {
   display: flex;
-  overflow-x: auto;
   gap: 30px;
+  overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 20px;
 }
 
 .product-card {
-  min-width: 300px;
+  min-width: 250px;
+  max-width: 300px;
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 20px;
+  padding: 15px;
   flex-shrink: 0;
   transition: 0.4s ease;
 }
@@ -329,23 +332,35 @@ footer .socials a i:hover {
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-.product-card img {
+/* Image inside card */
+.product-image {
   width: 100%;
+  aspect-ratio: 1/1; /* 1:1 ratio */
+  overflow: hidden;
   border-radius: 15px;
   margin-bottom: 15px;
 }
 
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text */
 .product-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 8px;
 }
 
 .product-card p {
   font-size: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: #ddd;
 }
 
+/* Button */
 .order-btn {
   display: inline-block;
   padding: 10px 25px;
@@ -359,5 +374,20 @@ footer .socials a i:hover {
 
 .order-btn:hover {
   background: #ff4d4d;
-  color: #fff;
+}
+
+/* Mobile & Desktop Responsive */
+@media(max-width: 900px){
+  .product-grid {
+    gap: 20px;
+  }
+  .product-card {
+    min-width: 45%; /* 2 per row on mobile */
+  }
+}
+
+@media(min-width: 901px){
+  .product-card {
+    min-width: 30%; /* 3 per row on desktop */
+  }
 }

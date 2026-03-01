@@ -219,3 +219,74 @@ footer .socials a i:hover {
   color: #0ff; /* neon accent on hover */
   transform: scale(1.2);
 }
+
+
+
+/* About */
+
+.about {
+  padding: 100px 5%;
+  color: #fff;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.4s ease;
+}
+
+.about-text:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.about-text h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+@media(max-width: 900px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}

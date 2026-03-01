@@ -293,49 +293,38 @@ footer .socials a i:hover {
 
 
 
-/* Pro Card */
-/* Section */
-.featured-products {
-  padding: 100px 5%;
+/* ===== Products Section ===== */
+
+.products-section {
+  padding: 80px 5%;
   color: #fff;
+}
+
+.products-section h2 {
   text-align: center;
+  font-size: 34px;
+  margin-bottom: 50px;
 }
 
-.featured-products h2 {
-  font-size: 42px;
-  margin-bottom: 40px;
-  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+/* Grid Layout */
+.products-grid {
+  display: grid;
+  gap: 40px;
 }
 
-/* Grid */
-.product-grid {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 20px;
-}
-
+/* Product Card */
 .product-card {
-  min-width: 250px;
-  max-width: 300px;
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 15px;
-  flex-shrink: 0;
-  transition: 0.4s ease;
+  text-align: center;
 }
 
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-}
-
-/* Image inside card */
+/* Image 1:1 */
 .product-image {
   width: 100%;
-  aspect-ratio: 1/1; /* 1:1 ratio */
+  aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 15px;
   margin-bottom: 15px;
@@ -350,44 +339,45 @@ footer .socials a i:hover {
 
 /* Text */
 .product-card h3 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 8px;
 }
 
 .product-card p {
-  font-size: 16px;
-  margin-bottom: 12px;
-  color: #ddd;
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 15px;
 }
 
 /* Button */
 .order-btn {
   display: inline-block;
-  padding: 10px 25px;
-  background: #000;
-  color: #fff;
-  border-radius: 50px;
+  padding: 8px 20px;
+  background: #ffffff;
+  color: #000;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 50px;
+  font-weight: 600;
   transition: 0.3s ease;
 }
 
 .order-btn:hover {
   background: #ff4d4d;
+  color: #fff;
 }
 
-/* Mobile & Desktop Responsive */
-@media(max-width: 900px){
-  .product-grid {
-    gap: 20px;
-  }
-  .product-card {
-    min-width: 45%; /* 2 per row on mobile */
+/* ===== Responsive ===== */
+
+/* Mobile: 2 cards per row */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(min-width: 901px){
-  .product-card {
-    min-width: 30%; /* 3 per row on desktop */
+/* Desktop: 3 cards per row */
+@media (min-width: 769px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
